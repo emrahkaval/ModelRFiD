@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ModelRFiD.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ModelRFiD_GET_MATERIAL_FROM_TAG2_XacuteWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.192.37.19:50000/XMII/SOAPRunner/RFID/TR_GET_MATERIAL_FROM_TAG2</Value>
+    </Setting>
+    <Setting Name="ModelRFiD_GET_MATERIAL_FROM_TAG_XacuteWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.192.37.19:50000/XMII/SOAPRunner/RFID/TR_GET_MATERIAL_FROM_TAG</Value>
+    </Setting>
+    <Setting Name="ModelRFiD_GET_MATERIAL_FROM_MODEL_XacuteWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.192.37.19:50000/XMII/SOAPRunner/RFID/TR_GET_MATERIAL_FROM_MODEL</Value>
+    </Setting>
+    <Setting Name="ModelRFiD_LOGIN_XacuteWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.192.37.19:50000/XMII/SOAPRunner/RFID/TR_RFID_LOGIN</Value>
+    </Setting>
+    <Setting Name="ModelRFiD_GET_MODEL_KONTROL_LIST_XacuteWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.192.37.19:50000/XMII/SOAPRunner/RFID/TR_GET_MODEL_KONTROL_LIST</Value>
+    </Setting>
+    <Setting Name="ModelRFiD_SET_MODEL_KONTROL_LIST_XacuteWS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.192.37.19:50000/XMII/SOAPRunner/RFID/TR_SET_MODEL_KONTROL_LIST</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

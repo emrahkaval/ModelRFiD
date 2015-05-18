@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5D3435AD-838A-42CC-A2FC-8575BA287D42}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ModelRFiD</RootNamespace>
+    <AssemblyName>ModelRFiD</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ModelRFiD.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="INIFileParser">
+      <HintPath>..\Disa_Led_Panel\Disa_Led_Panel\bin\Debug\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Symbol.RFID3.Host">
+      <HintPath>..\..\..\..\..\dll pool\Symbol.RFID3.Host.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cls_main.cs" />
+    <Compile Include="cls_rfid.cs" />
+    <Compile Include="frm_kontrol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_kontrol.Designer.cs">
+      <DependentUpon>frm_kontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_model.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_model.Designer.cs">
+      <DependentUpon>frm_model.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Web References\GET_MATERIAL_FROM_MODEL\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GET_MATERIAL_FROM_TAG2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GET_MATERIAL_FROM_TAG\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\GET_MODEL_KONTROL_LIST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\LOGIN\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\SET_MODEL_KONTROL_LIST\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_kontrol.resx">
+      <DependentUpon>frm_kontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_model.resx">
+      <DependentUpon>frm_model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Web References\GET_MATERIAL_FROM_MODEL\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GET_MATERIAL_FROM_MODEL\Rowset.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GET_MATERIAL_FROM_MODEL\TR_GET_MATERIAL_FROM_MODEL.wsdl" />
+    <None Include="Web References\GET_MATERIAL_FROM_TAG2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GET_MATERIAL_FROM_TAG2\Rowset.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GET_MATERIAL_FROM_TAG2\TR_GET_MATERIAL_FROM_TAG2.wsdl" />
+    <None Include="Web References\GET_MATERIAL_FROM_TAG\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GET_MATERIAL_FROM_TAG\Rowset.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GET_MATERIAL_FROM_TAG\TR_GET_MATERIAL_FROM_TAG.wsdl" />
+    <None Include="Web References\GET_MODEL_KONTROL_LIST\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\GET_MODEL_KONTROL_LIST\Rowset.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\GET_MODEL_KONTROL_LIST\TR_GET_MODEL_KONTROL_LIST.wsdl" />
+    <None Include="Web References\LOGIN\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\LOGIN\Rowset.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\LOGIN\TR_RFID_LOGIN.wsdl" />
+    <None Include="Web References\SET_MODEL_KONTROL_LIST\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\SET_MODEL_KONTROL_LIST\Rowset.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\SET_MODEL_KONTROL_LIST\TR_SET_MODEL_KONTROL_LIST.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_GET_MATERIAL_FROM_MODEL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GET_MATERIAL_FROM_MODEL\</RelPath>
+      <UpdateFromURL>http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_GET_MATERIAL_FROM_MODEL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ModelRFiD_GET_MATERIAL_FROM_MODEL_XacuteWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_GET_MATERIAL_FROM_TAG">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GET_MATERIAL_FROM_TAG\</RelPath>
+      <UpdateFromURL>http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_GET_MATERIAL_FROM_TAG</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ModelRFiD_GET_MATERIAL_FROM_TAG_XacuteWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_GET_MATERIAL_FROM_TAG2">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GET_MATERIAL_FROM_TAG2\</RelPath>
+      <UpdateFromURL>http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_GET_MATERIAL_FROM_TAG2</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ModelRFiD_GET_MATERIAL_FROM_TAG2_XacuteWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_GET_MODEL_KONTROL_LIST">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\GET_MODEL_KONTROL_LIST\</RelPath>
+      <UpdateFromURL>http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_GET_MODEL_KONTROL_LIST</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ModelRFiD_GET_MODEL_KONTROL_LIST_XacuteWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_RFID_LOGIN">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\LOGIN\</RelPath>
+      <UpdateFromURL>http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_RFID_LOGIN</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ModelRFiD_LOGIN_XacuteWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_SET_MODEL_KONTROL_LIST">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\SET_MODEL_KONTROL_LIST\</RelPath>
+      <UpdateFromURL>http://10.192.37.19:50000/XMII/WSDLGen/RFID/TR_SET_MODEL_KONTROL_LIST</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ModelRFiD_SET_MODEL_KONTROL_LIST_XacuteWS</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
